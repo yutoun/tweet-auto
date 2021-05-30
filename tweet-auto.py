@@ -12,9 +12,14 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-#検索キーワード
+# public_tweets = api.home_timeline()
+# for tweet in public_tweets:
+#     print('-------------------------')
+#     print(tweet.text)
+
+# #検索キーワード
 q = "駆け出しエンジニア" #ここに検索キーワードを設定
-count = 100
+count = 1
 
 search_results = api.search(q=q, count=count)
 
